@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/je-lwc.credit-flag-summary",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve bDWLr3TFKopCxb7JRjRO --open"
+  }
+}
