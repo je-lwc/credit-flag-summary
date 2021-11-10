@@ -4,7 +4,15 @@
       "npm": "lightning-base-components"
     },
     {
-      "dir": "src"
+      "dir": "src/lwc"
+    },
+    {
+      "name": "@salesforce/apex/CreditFlagSummaryController.getAccountCreditFlag",
+      "path": "src/apexMock/getAccountCreditFlag.js"
+    },
+    {
+      "name": "@salesforce/apex/CreditFlagSummaryController.updateCreditFlagSummary",
+      "path": "src/apexMock/updateCreditFlagSummary.js"
     }
   ]
 }
