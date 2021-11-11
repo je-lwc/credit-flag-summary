@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  border-bottom: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, rgb(221, 219, 218));
 }
 
 .flag-row > * {
