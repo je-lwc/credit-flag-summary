@@ -1,6 +1,15 @@
 <template>
-  <div>
-    <h1>Credit Flag Summary</h1>
-    <c-credit-flag-item></c-credit-flag-item>
+  <div class="container">
+    <c-credit-flag-item
+      for:each={flags}
+      for:item={f}
+      key={f.index}
+      flag-value={f.value}
+      is-editable={f.editable}
+      is-deletable={f.deletable}
+      available-values={f.options}
+      onupdate={handleUpdate}
+      ondelete={handleDelete}
+    ></c-credit-flag-item>
   </div>
 </template>
