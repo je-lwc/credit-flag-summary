@@ -5,8 +5,8 @@ export default function () {
     const f = window.creditFlags || {
       accountId: '123',
       creditRate: 'APledge',
-      creditRate2,
-      creditRate3,
+      creditRate2: null,
+      creditRate3: null,
       creditRate4: 'CsSpecialHandling'
     };
     console.log('get flags', f);
