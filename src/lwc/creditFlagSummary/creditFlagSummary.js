@@ -53,8 +53,8 @@ export default class creditFlagSummary extends LightningElement {
         return {
           value,
           index,
-          editable: this.canEditFlags(value),
-          deletable: this.canDeleteFlags(value),
+          editable: this.canEditFlag(value),
+          deletable: this.canDeleteFlag(value),
           options: [...options.filter((v) => !this.rawFlags.includes(v)), value].join(',')
         };
       } else {
@@ -64,8 +64,8 @@ export default class creditFlagSummary extends LightningElement {
           return {
             value: '',
             index,
-            editable: this.canEditFlags(value),
-            deletable: this.canDeleteFlags(value),
+            editable: this.canEditFlag(value),
+            deletable: this.canDeleteFlag(value),
             options: options.filter((v) => !this.rawFlags.includes(v)).join(',')
           };
         }
