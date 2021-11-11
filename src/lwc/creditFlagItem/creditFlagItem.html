@@ -6,6 +6,7 @@
         icon-name="utility:edit"
         alternative-text="Edit"
         title="Edit"
+        onclick={handleEdit}
         if:true={isEditable}
       ></lightning-button-icon>
       <lightning-button-icon
@@ -13,6 +14,7 @@
         alternative-text="Delete"
         title="Delete"
         if:true={isDeletable}
+        onclick={handleDelete}
       ></lightning-button-icon>
     </div>
   </div>
