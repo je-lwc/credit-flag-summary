@@ -79,7 +79,7 @@ export default class creditFlagSummary extends LightningElement {
     });
   }
 
-  handleDelete({ detail: value }) {
+  handleDelete({ detail: { value } }) {
     const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v) =>
       v === value ? null : v
     );
