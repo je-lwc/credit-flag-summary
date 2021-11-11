@@ -8,15 +8,15 @@
     },
     {
       "name": "@salesforce/apex/BillingCustomerController.getAccountCreditFlag",
-      "path": "src/mock/getAccountCreditFlag.js"
+      "path": "src/mocks/getAccountCreditFlag.js"
     },
     {
       "name": "@salesforce/apex/CreditFlagSummaryController.updateCreditFlagSummary",
-      "path": "src/mock/updateCreditFlagSummary.js"
+      "path": "src/mocks/updateCreditFlagSummary.js"
     },
     {
       "name": "lightning/platformShowToastEvent",
-      "path": "src/mock/showToastEvent.js"
+      "path": "src/mocks/showToastEvent.js"
     }
   ]
 }
