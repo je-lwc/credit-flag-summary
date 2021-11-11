@@ -16,6 +16,9 @@ export default class creditFlagItem extends LightningElement {
   @api
   isDeletable = false;
 
+  @api
+  index;
+
   _availableValues;
   @api
   set availableValues(v) {
@@ -52,7 +55,7 @@ export default class creditFlagItem extends LightningElement {
   handleDelete() {
     this.dispatchEvent(
       new CustomEvent('delete', {
-        detail: { value: this.flagValue }
+        detail: { value: this.flagValue, index: this.index }
       })
     );
   }
@@ -75,7 +78,7 @@ export default class creditFlagItem extends LightningElement {
     if (this.flagValue !== this.selectedValue) {
       this.dispatchEvent(
         new CustomEvent('update', {
-          detail: { newValue: this.selectedValue, oldValue: this.flagValue }
+          detail: { newValue: this.selectedValue, oldValue: this.flagValue, index: this.index }
         })
       );
       this.flagValue = this.selectedValue;

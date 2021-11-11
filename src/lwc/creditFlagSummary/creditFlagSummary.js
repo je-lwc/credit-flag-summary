@@ -79,25 +79,17 @@ export default class creditFlagSummary extends LightningElement {
     });
   }
 
-  handleDelete({ detail: { value } }) {
-    const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v) =>
-      v === value ? null : v
+  handleDelete({ detail: { index } }) {
+    const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v, i) =>
+      i === parseInt(index, 10) ? null : v
     );
     this.updateFlags({ creditRate, creditRate2, creditRate3, creditRate4 });
   }
 
-  handleUpdate({ detail: { newValue, oldValue } }) {
-    let newFlagIsSet = false;
-    const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v) => {
-      if (oldValue) {
-        return v === oldValue ? newValue : v;
-      }
-      if (!newFlagIsSet && !v) {
-        newFlagIsSet = true;
-        return newValue;
-      }
-      return v;
-    });
+  handleUpdate({ detail: { newValue, index } }) {
+    const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v, i) =>
+      i === parseInt(index, 10) ? newValue : v
+    );
     this.updateFlags({ creditRate, creditRate2, creditRate3, creditRate4 });
   }
 
