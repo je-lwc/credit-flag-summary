@@ -7,7 +7,7 @@
       "dir": "src/lwc"
     },
     {
-      "name": "@salesforce/apex/CreditFlagSummaryController.getAccountCreditFlag",
+      "name": "@salesforce/apex/BillingCustomerController.getAccountCreditFlag",
       "path": "src/apexMock/getAccountCreditFlag.js"
     },
     {
