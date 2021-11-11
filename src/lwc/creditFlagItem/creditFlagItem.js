@@ -58,7 +58,7 @@ export default class creditFlagItem extends LightningElement {
   }
 
   handleEdit() {
-    this.selectedValue = this.flagValue;
+    this.selectedValue = this.flagValue || this.availableValues[0];
     this.mode = 'edit';
   }
 
