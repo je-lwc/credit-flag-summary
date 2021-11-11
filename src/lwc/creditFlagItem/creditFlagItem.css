@@ -21,3 +21,8 @@ select:hover {
   outline: 0;
   box-shadow: #0070d2 0 0 3px;
 }
+
+h1 {
+  font-size: 13px;
+  font-weight: 400;
+}
