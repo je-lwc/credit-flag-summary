@@ -45,7 +45,7 @@ export default class creditFlagItem extends LightningElement {
   }
 
   get flagLabel() {
-    return flagDictionary[flagValue];
+    return flagDictionary[this.flagValue];
   }
 
   get comboBoxOptions() {
