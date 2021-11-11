@@ -1,9 +1,11 @@
 .flag-row {
   width: 100%;
-  display: flex;
-  flex-direction: row;
 }
 
 .flag-row > * {
   flex: 1;
+}
+
+.actions {
+  max-width: 80px;
 }
