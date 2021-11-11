@@ -28,7 +28,7 @@ export default class creditFlagSummary extends LightningElement {
       )
       .finally(() => {
         this.loading = false;
-        console.log('finished', this.loading);
+        this.rawFlags = [...this.rawFlags];
       });
   }
   get recordId() {
