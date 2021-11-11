@@ -20,6 +20,7 @@ export default class creditFlagSummary extends LightningElement {
   set recordId(v) {
     this._accountId = v;
     this.loading = true;
+    console.log(getAccountCreditFlag);
     getAccountCreditFlag({ accountId: v })
       .then(
         ({ CREDIT_RATE__c, CREDIT_RATE2__c, CREDIT_RATE3__c, CREDIT_RATE4__c }) =>
