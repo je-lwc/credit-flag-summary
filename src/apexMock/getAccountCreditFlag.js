@@ -2,7 +2,7 @@ import { getRandom } from './util';
 
 export default function () {
   return new Promise((resolve) => {
-    const f = window.creditFlags;
+    const f = window.creditFlags || {};
     setTimeout(() => {
       resolve({
         CREDIT_RATE__c: f.creditRate,
