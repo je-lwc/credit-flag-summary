@@ -26,10 +26,7 @@ export default class creditFlagSummary extends LightningElement {
         ({ CREDIT_RATE__c, CREDIT_RATE2__c, CREDIT_RATE3__c, CREDIT_RATE4__c }) =>
           (this.rawFlags = [CREDIT_RATE__c, CREDIT_RATE2__c, CREDIT_RATE3__c, CREDIT_RATE4__c])
       )
-      .finally(() => {
-        this.loading = false;
-        this.rawFlags = [...this.rawFlags];
-      });
+      .finally(() => (this.loading = false));
   }
   get recordId() {
     return this._accountId;
@@ -89,14 +86,6 @@ export default class creditFlagSummary extends LightningElement {
     });
   }
 
-  renderedCallback() {
-    const spinner = this.template.querySelector('.slds-spinner_container');
-    if (spinner) {
-      console.log('loading', this.loading);
-      spinner.hidden = !this.loading;
-    }
-  }
-
   handleDelete({ detail: { index } }) {
     const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v, i) =>
       i === parseInt(index, 10) ? null : v
@@ -144,6 +133,6 @@ export default class creditFlagSummary extends LightningElement {
           })
         );
       })
-      .finally((this.loading = false));
+      .finally(() => (this.loading = false));
   }
 }
