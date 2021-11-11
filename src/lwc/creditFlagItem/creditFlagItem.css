@@ -10,4 +10,7 @@
 
 .actions {
   max-width: 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
