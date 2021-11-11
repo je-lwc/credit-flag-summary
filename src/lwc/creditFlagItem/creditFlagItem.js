@@ -62,6 +62,10 @@ export default class creditFlagItem extends LightningElement {
     this.selectedValue = event.detail.value;
   }
 
+  handleCancel() {
+    this.mode = 'view';
+  }
+
   handleSave() {
     this.mode = 'view';
     if (this.flagValue !== this.selectedValue) {
