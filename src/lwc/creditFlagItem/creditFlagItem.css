@@ -14,3 +14,9 @@
   flex-direction: row;
   gap: 5px;
 }
+
+select {
+  border: 1px solid #1589ee;
+  outline: 0;
+  box-shadow: #0070d2 0 0 3px;
+}
