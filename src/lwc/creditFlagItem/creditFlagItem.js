@@ -44,6 +44,10 @@ export default class creditFlagItem extends LightningElement {
     return this.mode === 'edit';
   }
 
+  get flagLabel() {
+    return flagDictionary[flagValue];
+  }
+
   get comboBoxOptions() {
     return this.availableValues.map((value) => ({
       value,

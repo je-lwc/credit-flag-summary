@@ -16,6 +16,10 @@
   gap: 5px;
 }
 
+select {
+  padding: 5px 3px;
+}
+
 select:hover {
   border: 1px solid #1589ee;
   outline: 0;
@@ -25,4 +29,5 @@ select:hover {
 h1 {
   font-size: 13px;
   font-weight: 400;
+  padding: 5px 3px;
 }
