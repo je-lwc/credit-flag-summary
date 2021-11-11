@@ -16,5 +16,23 @@
       ></lightning-button-icon>
     </div>
   </div>
-  <div class="edit-mode flag-row" if:true={isEditMode}></div>
+  <div class="edit-mode flag-row" if:true={isEditMode}>
+    <lightning-combobox
+      value={flagValue}
+      options={comboBoxOptions}
+      onchange={handleValueChange}
+    ></lightning-combobox>
+    <div class="actions">
+      <lightning-button-icon
+        icon-name="utility:save"
+        alternative-text="Save"
+        title="Save"
+      ></lightning-button-icon>
+      <lightning-button-icon
+        icon-name="utility:close"
+        alternative-text="Cancel"
+        title="Cancel"
+      ></lightning-button-icon>
+    </div>
+  </div>
 </template>
