@@ -31,11 +31,11 @@ export default class creditFlagSummary extends LightningElement {
     return this._accountId;
   }
 
-  get canEditFlags(flagValue) {
+  canEditFlags(flagValue) {
     return this.userDepartment === escalationTeam || !flagValue;
   }
 
-  get canDeleteFlag(flagValue) {
+  canDeleteFlag(flagValue) {
     return this.userDepartment === escalationTeam && flagValue === 'CsSpecialHandling';
   }
 
