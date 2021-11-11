@@ -31,12 +31,12 @@ export default class creditFlagSummary extends LightningElement {
     return this._accountId;
   }
 
-  get canEditFlags() {
-    return this.userDepartment === escalationTeam;
+  get canEditFlags(flagValue) {
+    return this.userDepartment === escalationTeam || !flagValue;
   }
 
-  get canDeleteFlags() {
-    return this.userDepartment === escalationTeam;
+  get canDeleteFlag(flagValue) {
+    return this.userDepartment === escalationTeam && flagValue === 'CsSpecialHandling';
   }
 
   get flags() {
@@ -53,8 +53,8 @@ export default class creditFlagSummary extends LightningElement {
         return {
           value,
           index,
-          editable: this.canEditFlags,
-          deletable: this.canDeleteFlags,
+          editable: this.canEditFlags(value),
+          deletable: this.canDeleteFlags(value),
           options: [...options.filter((v) => !this.rawFlags.includes(v)), value].join(',')
         };
       } else {
@@ -64,8 +64,8 @@ export default class creditFlagSummary extends LightningElement {
           return {
             value: '',
             index,
-            editable: true,
-            deletable: false,
+            editable: this.canEditFlags(value),
+            deletable: this.canDeleteFlags(value),
             options: options.filter((v) => !this.rawFlags.includes(v)).join(',')
           };
         }
