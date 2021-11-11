@@ -31,7 +31,7 @@ export default class creditFlagSummary extends LightningElement {
     return this._accountId;
   }
 
-  canEditFlags(flagValue) {
+  canEditFlag(flagValue) {
     return this.userDepartment === escalationTeam || !flagValue;
   }
 
