@@ -88,6 +88,7 @@ export default class creditFlagSummary extends LightningElement {
   renderedCallback() {
     const spinner = this.template.querySelector('.slds-spinner_container');
     if (spinner) {
+      console.log('loading', loading);
       spinner.hidden = !this.loading;
     }
   }
