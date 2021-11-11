@@ -2,7 +2,13 @@ import { getRandom } from './util';
 
 export default function () {
   return new Promise((resolve) => {
-    const f = window.creditFlags || {};
+    const f = window.creditFlags || {
+      accountId: '123',
+      creditRate: 'APledge',
+      creditRate2,
+      creditRate3,
+      creditRate4: 'CsSpecialHandling'
+    };
     console.log('get flags', f);
     setTimeout(() => {
       resolve({
