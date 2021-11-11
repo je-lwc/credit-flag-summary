@@ -22,7 +22,7 @@ export default class creditFlagItem extends LightningElement {
   _availableValues;
   @api
   set availableValues(v) {
-    if (typeof v === 'array') {
+    if (Array.isArray(v)) {
       this._availableValues = v;
     } else if (typeof v === 'string') {
       this._availableValues = v.trim().split(',');

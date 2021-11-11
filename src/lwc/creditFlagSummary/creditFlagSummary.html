@@ -12,5 +12,12 @@
         ondelete={handleDelete}
       ></c-credit-flag-item>
     </div>
+    <lightning-spinner
+      if:true={loading}
+      alternative-text="Loading"
+      variant="brand"
+      size="Large"
+      title="Loading Flags..."
+    ></lightning-spinner>
   </div>
 </template>
