@@ -87,9 +87,17 @@ export default class creditFlagSummary extends LightningElement {
   }
 
   handleUpdate({ detail: { newValue, oldValue } }) {
-    const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v) =>
-      v === oldValue ? newValue : v
-    );
+    let newFlagIsSet = false;
+    const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v) => {
+      if (oldValue) {
+        return v === oldValue ? newValue : v;
+      }
+      if (!newFlagIsSet && !v) {
+        newFlagIsSet = true;
+        return newValue;
+      }
+      return v;
+    });
     this.updateFlags({ creditRate, creditRate2, creditRate3, creditRate4 });
   }
 
