@@ -85,6 +85,10 @@ export default class creditFlagSummary extends LightningElement {
     });
   }
 
+  get notLoading() {
+    return !this.loading;
+  }
+
   handleDelete({ detail: { index } }) {
     const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v, i) =>
       i === parseInt(index, 10) ? null : v
