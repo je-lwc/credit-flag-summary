@@ -83,7 +83,7 @@ export default class creditFlagSummary extends LightningElement {
     const [creditRate, creditRate2, creditRate3, creditRate4] = this.rawFlags.map((v) =>
       v === value ? null : v
     );
-    console.log('handle delete', creditRate, creditRate2, creditRate3, creditRate4);
+    console.log('handle delete', value, creditRate, creditRate2, creditRate3, creditRate4);
     this.updateFlags({ creditRate, creditRate2, creditRate3, creditRate4 });
   }
 
