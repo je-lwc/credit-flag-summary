@@ -63,7 +63,7 @@ export default class creditFlagItem extends LightningElement {
   }
 
   handleValueChange(event) {
-    this.selectedValue = event.detail.value;
+    this.selectedValue = event.currentTarget.value;
   }
 
   handleCancel() {
