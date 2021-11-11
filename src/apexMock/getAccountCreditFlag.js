@@ -3,6 +3,7 @@ import { getRandom } from './util';
 export default function () {
   return new Promise((resolve) => {
     const f = window.creditFlags || {};
+    console.log('get flags', f);
     setTimeout(() => {
       resolve({
         CREDIT_RATE__c: f.creditRate,
