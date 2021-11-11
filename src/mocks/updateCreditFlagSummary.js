@@ -1,6 +1,6 @@
 import { getRandom } from './util';
 
-export default function (accountId, creditRate, creditRate2, creditRate3, creditRate4) {
+export default function ({ accountId, creditRate, creditRate2, creditRate3, creditRate4 }) {
   window.creditFlags = {
     accountId,
     creditRate,
