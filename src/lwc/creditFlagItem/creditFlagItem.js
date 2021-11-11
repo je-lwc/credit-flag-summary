@@ -42,7 +42,11 @@ export default class creditFlagItem extends LightningElement {
   }
 
   get comboBoxOptions() {
-    return this.availableValues.map((value) => ({ label: flagDictionary[value] || value, value }));
+    return this.availableValues.map((value) => ({
+      value,
+      label: flagDictionary[value] || value,
+      selected: value === this.flagValue
+    }));
   }
 
   handleDelete() {

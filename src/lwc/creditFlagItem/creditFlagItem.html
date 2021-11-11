@@ -19,11 +19,17 @@
     </div>
   </div>
   <div class="edit-mode flag-row" if:true={isEditMode}>
-    <lightning-combobox
-      value={flagValue}
-      options={comboBoxOptions}
-      onchange={handleValueChange}
-    ></lightning-combobox>
+    <select class="slds-select" onchange={handleValueChange}>
+      <option
+        for:each={comboBoxOptions}
+        for:item="o"
+        key={o.value}
+        value={o.value}
+        selected={o.selected}
+      >
+        {o.label}
+      </option>
+    </select>
     <div class="actions">
       <lightning-button-icon
         icon-name="utility:save"
