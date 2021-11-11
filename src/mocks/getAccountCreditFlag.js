@@ -17,6 +17,6 @@ export default function () {
         CREDIT_RATE3__c: f.creditRate3,
         CREDIT_RATE4__c: f.creditRate4
       });
-    }, getRandom(1, 500));
+    }, getRandom(500, 2500));
   });
 }

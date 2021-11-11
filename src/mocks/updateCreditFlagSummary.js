@@ -10,6 +10,6 @@ export default function ({ accountId, creditRate, creditRate2, creditRate3, cred
   };
   console.log('update flags', window.creditFlags);
   return new Promise((resolve) =>
-    setTimeout(() => resolve('Credit Flags processed Successfully'), getRandom(1, 500))
+    setTimeout(() => resolve('Credit Flags processed Successfully'), getRandom(500, 4500))
   );
 }
