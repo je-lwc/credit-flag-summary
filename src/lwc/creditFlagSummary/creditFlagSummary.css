@@ -4,3 +4,8 @@
   flex-direction: column;
   gap: 2px;
 }
+
+.row {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,16 +1,16 @@
 <template>
   <div class="container">
-    <c-credit-flag-item
-      for:each={flags}
-      for:item="f"
-      key={f.index}
-      index={f.index}
-      flag-value={f.value}
-      is-editable={f.editable}
-      is-deletable={f.deletable}
-      available-values={f.options}
-      onupdate={handleUpdate}
-      ondelete={handleDelete}
-    ></c-credit-flag-item>
+    <div class="row" for:each={flags} for:item="f" key={f.index}>
+      <label>{f.label}</label>
+      <c-credit-flag-item
+        index={f.index}
+        flag-value={f.value}
+        is-editable={f.editable}
+        is-deletable={f.deletable}
+        available-values={f.options}
+        onupdate={handleUpdate}
+        ondelete={handleDelete}
+      ></c-credit-flag-item>
+    </div>
   </div>
 </template>
