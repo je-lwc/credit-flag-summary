@@ -14,6 +14,7 @@ export default class creditFlagSummary extends LightningElement {
 
   userDepartment = escalationTeam; // TODO: need additional code to populate user department
 
+  @track
   loading = false;
 
   @api
