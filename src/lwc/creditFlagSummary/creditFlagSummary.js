@@ -26,7 +26,10 @@ export default class creditFlagSummary extends LightningElement {
         ({ CREDIT_RATE__c, CREDIT_RATE2__c, CREDIT_RATE3__c, CREDIT_RATE4__c }) =>
           (this.rawFlags = [CREDIT_RATE__c, CREDIT_RATE2__c, CREDIT_RATE3__c, CREDIT_RATE4__c])
       )
-      .finally(() => (this.loading = false));
+      .finally(() => {
+        this.loading = false;
+        console.log('finished', this.loading);
+      });
   }
   get recordId() {
     return this._accountId;
