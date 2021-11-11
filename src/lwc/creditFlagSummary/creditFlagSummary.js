@@ -49,11 +49,12 @@ export default class creditFlagSummary extends LightningElement {
     const numberOfUsedFlag = this.rawFlags.filter((v) => v).length;
     let numberOfAvailableFlags = maxFlagsAvailable - numberOfUsedFlag;
     return this.rawFlags.map((value, index) => {
+      const label = `Flag${index ? index + 1 : ''}`;
       if (value) {
         return {
           value,
           index,
-          label: `flag${index ? index + 1 : ''}`,
+          label,
           editable: this.canEditFlag(value),
           deletable: this.canDeleteFlag(value),
           options: [...options.filter((v) => !this.rawFlags.includes(v)), value].join(',')
@@ -65,7 +66,7 @@ export default class creditFlagSummary extends LightningElement {
           return {
             value: '',
             index,
-            label: `flag${index ? index + 1 : ''}`,
+            label,
             editable: this.canEditFlag(value),
             deletable: this.canDeleteFlag(value),
             options: options.filter((v) => !this.rawFlags.includes(v)).join(',')
@@ -75,7 +76,7 @@ export default class creditFlagSummary extends LightningElement {
       return {
         value: '',
         index,
-        label: `flag${index ? index + 1 : ''}`,
+        label,
         editable: false,
         deletable: false
       };
