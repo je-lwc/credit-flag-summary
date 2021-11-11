@@ -85,8 +85,11 @@ export default class creditFlagSummary extends LightningElement {
     });
   }
 
-  get notLoading() {
-    return !this.loading;
+  renderedCallback() {
+    const spinner = this.template.querySelector('.slds-spinner_container');
+    if (spinner) {
+      spinner.hidden = !this.loading;
+    }
   }
 
   handleDelete({ detail: { index } }) {
